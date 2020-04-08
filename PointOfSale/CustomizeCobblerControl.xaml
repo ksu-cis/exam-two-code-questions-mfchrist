@@ -6,7 +6,27 @@
              xmlns:local="clr-namespace:ExamTwoQuestions.PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock>Customize Cobbler</TextBlock>
-    </Grid>
+    <StackPanel>
+        <TextBlock FontSize="40">Customize this Cobbler</TextBlock>
+        <StackPanel Orientation="Horizontal">
+            <CheckBox IsChecked="{Binding Path=WithIceCream}" VerticalAlignment="Center">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="2" ScaleY="2" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            <TextBlock Text="With Ice Cream" FontSize="20"/>
+
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+
+            <ComboBox Width="100" Height="40">
+                <ComboBoxItem IsSelected="{Binding Path=IsPeach}">Peach</ComboBoxItem>
+                <ComboBoxItem IsSelected="{Binding Path=IsCherry}">Cherry</ComboBoxItem>
+                <ComboBoxItem IsSelected="{Binding Path=IsBlueberry}">Blueberry</ComboBoxItem>
+            </ComboBox>
+            <TextBlock Text="Fruit Filling  " FontSize="20"/>
+
+        </StackPanel>
+
+    </StackPanel>
 </UserControl>
